@@ -3,6 +3,15 @@
 args = ARGV
 puts "You ran Hyde with these arguments: #{args}"
 
+hyde/bin new file_path
+args = [new, file_path]
+args[0] = "new"
+args[1] = file_path
+
 # ##############
 # Your code here
 # ##############
+
+
+if ARGV[0] = "new"
+  setup.create_project_skeleton
