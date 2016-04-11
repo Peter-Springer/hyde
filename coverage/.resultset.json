@@ -1,0 +1,25 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/charleskaminer/Turing/1module/hyde/lib/setup.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1460399480
+  }
+}
