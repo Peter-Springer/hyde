@@ -11,10 +11,13 @@ class Setup
     else
       Dir.mkdir("#{@file_path}")
     end
+
+    create_folders
+    create_sub_folders
+    create_files
   end
 
   def create_folders
-    new_project_skeleton
     ["output", "source"].each do |element|
       Dir.mkdir("#{@file_path}/#{element}")
     end

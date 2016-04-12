@@ -13,7 +13,7 @@ class SetupTest < Minitest::Test
 
     FileUtils.remove_dir("/Users/charleskaminer/turing/1module/hyde/newproject")
   end
-
+  
   def test_new_project_skeleton_returns_argument_error_if_file_exits
     dir = Setup.new("/Users/charleskaminer/turing/1module/hyde/newproject")
     dir.new_project_skeleton
@@ -27,7 +27,7 @@ class SetupTest < Minitest::Test
 
   def test_create_folders_creates_output_and_source_directories
     dir = Setup.new("/Users/charleskaminer/turing/1module/hyde/newproject")
-    dir.create_folders
+    dir.new_project_skeleton
     output = "/Users/charleskaminer/turing/1module/hyde/newproject/output"
     source = "/Users/charleskaminer/turing/1module/hyde/newproject/source"
 
@@ -39,8 +39,7 @@ class SetupTest < Minitest::Test
 
   def test_create_sub_folders_creates_source_sub_directories
     dir = Setup.new("/Users/charleskaminer/turing/1module/hyde/newproject")
-    dir.create_folders
-    dir.create_sub_folders
+    dir.new_project_skeleton
     css = "/Users/charleskaminer/turing/1module/hyde/newproject/source/css"
     pages = "/Users/charleskaminer/turing/1module/hyde/newproject/source/pages"
     posts = "/Users/charleskaminer/turing/1module/hyde/newproject/source/posts"
@@ -54,9 +53,7 @@ class SetupTest < Minitest::Test
 
   def test_create_file
     dir = Setup.new("/Users/charleskaminer/turing/1module/hyde/newproject")
-    dir.create_folders
-    dir.create_sub_folders
-    dir.create_files
+    dir.new_project_skeleton
     date = Time.new.strftime("%Y-%m-%d")
     main_css = "/Users/charleskaminer/turing/1module/hyde/newproject/source/css/main.css"
     index_md = "/Users/charleskaminer/turing/1module/hyde/newproject/source/index.md"
