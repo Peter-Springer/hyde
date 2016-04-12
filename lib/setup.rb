@@ -6,10 +6,10 @@ class Setup
   end
 
   def new_project_skeleton
-    if Dir.exists?("#{@file_path}")
+    if Dir.exists?(File.join(Dir.home, "#{@file_path}"))
       raise ArgumentError.new("directory already exists")
     else
-      Dir.mkdir("#{@file_path}")
+      Dir.mkdir(File.join(Dir.home, "#{@file_path}"))
     end
 
     create_folders
@@ -19,21 +19,21 @@ class Setup
 
   def create_folders
     ["output", "source"].each do |element|
-      Dir.mkdir("#{@file_path}/#{element}")
+      Dir.mkdir(File.join(Dir.home, "#{@file_path}/#{element}"))
     end
   end
 
   def create_sub_folders
     ["css", "pages", "posts"].each do |element|
-      Dir.mkdir("#{@file_path}/source/#{element}")
+      Dir.mkdir(File.join(Dir.home, "#{@file_path}/source/#{element}"))
     end
   end
 
   def create_files
     date = Time.new.strftime("%Y-%m-%d")
-    FileUtils.touch ("#{@file_path}/source/css/main.css")
-    FileUtils.touch ("#{@file_path}/source/index.md")
-    FileUtils.touch ("#{@file_path}/source/pages/about.md")
-    FileUtils.touch ("#{@file_path}/source/posts/#{date}-welcome-to-hyde.markdown")
+    FileUtils.touch (File.join(Dir.home, "#{@file_path}/source/css/main.css"))
+    FileUtils.touch (File.join(Dir.home, "#{@file_path}/source/index.md"))
+    FileUtils.touch (File.join(Dir.home, "#{@file_path}/source/pages/about.md"))
+    FileUtils.touch (File.join(Dir.home, "#{@file_path}/source/posts/#{date}-welcome-to-hyde.markdown"))
   end
 end

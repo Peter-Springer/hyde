@@ -1,17 +1,19 @@
 #!/usr/bin/env ruby
+require './lib/setup.rb'
 
 args = ARGV
 puts "You ran Hyde with these arguments: #{args}"
 
-hyde/bin new file_path
-args = [new, file_path]
-args[0] = "new"
-args[1] = file_path
 
-# ##############
-# Your code here
-# ##############
+#run hyde
+#when hyde runs tree is created
+#if new run setup with file path
+
+  if ARGV[0] = "new"
+    Setup.new(ARGV[1]).new_project_skeleton
+  end
 
 
-if ARGV[0] = "new"
-  setup.create_project_skeleton
+# bind/hyde new /path/to/the/site  <-- entered into command line
+# ARGV = ["new", "/path/to/the/site"]  <--- automatically created
+# "new /path/to/the/site".split(" ")  <---- how ARGV gets created
