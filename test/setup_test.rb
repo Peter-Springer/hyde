@@ -68,4 +68,17 @@ class SetupTest < Minitest::Test
     FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
   end
 
+  def test_default_layout
+    dir = Setup.new("/test/newproject")
+    dir.new_project_skeleton
+
+    assert Dir.exist?(File.join(Dir.pwd, "/test/newproject/source/layouts"))
+    assert File.exist?(File.join(Dir.pwd, "/test/newproject/source/layouts/default.html.erb"))
+
+    FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
+  end
+
+
+
+
  end

@@ -13,10 +13,16 @@ class Build
   end
 
   def build
-    setup.new_project_skeleton
-    copy_source
-    flag_markdowns
-    convert_md_to_html
+    if Dir.exist?(File.join(Dir.pwd, @file_path))
+      copy_source
+      flag_markdowns
+      convert_md_to_html
+    else
+      setup.new_project_skeleton
+      copy_source
+      flag_markdowns
+      convert_md_to_html
+    end
   end
 
   def copy_source

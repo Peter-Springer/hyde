@@ -1,4 +1,5 @@
 require 'FileUtils'
+require 'erb'
 class Setup
 
   def initialize(file_path)
@@ -15,6 +16,7 @@ class Setup
     create_folders
     create_sub_folders
     create_files
+    setup_default_layout("Juicy Post", "Your content here")
   end
 
   def create_folders
@@ -24,7 +26,7 @@ class Setup
   end
 
   def create_sub_folders
-    ["css", "pages", "posts"].each do |element|
+    ["css", "pages", "posts", "layouts"].each do |element|
       FileUtils.mkdir_p(File.join(Dir.pwd, "#{@file_path}/source/#{element}"))
     end
   end
@@ -35,5 +37,15 @@ class Setup
     FileUtils.touch (File.join(Dir.pwd, "#{@file_path}/source/index.md"))
     FileUtils.touch (File.join(Dir.pwd, "#{@file_path}/source/pages/about.md"))
     FileUtils.touch (File.join(Dir.pwd, "#{@file_path}/source/posts/#{date}-welcome-to-hyde.md"))
+    FileUtils.touch (File.join(Dir.pwd, "#{@file_path}/source/layouts/default.html.erb"))
   end
+
+  def setup_default_layout(title, content)
+    default_format = "./lib/default_template.html.erb"
+    default_file = File.join(Dir.pwd, "#{@file_path}/source/layouts/default.html.erb")
+    read_default = File.read(default_format)
+    new_text = ERB.new(read_default).result(binding)
+    File.write(default_file, new_text)
+  end
+
 end
