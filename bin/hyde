@@ -11,7 +11,9 @@ puts "You ran Hyde with these arguments: #{args}"
 
   if ARGV[0] = "new"
     Setup.new(ARGV[1]).new_project_skeleton
-  end
+  else ARGV[0] = "build"
+    Build.new(ARGV[1])
+    end
 
 
 # bind/hyde new /path/to/the/site  <-- entered into command line
