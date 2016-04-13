@@ -1,19 +1,27 @@
 #!/usr/bin/env ruby
 require './lib/setup.rb'
-
+require './lib/build.rb'
+require './lib/post.rb'
 args = ARGV
-puts "You ran Hyde with these arguments: #{args}"
 
+puts "You ran Hyde with these arguments: #{args}"
 
 #run hyde
 #when hyde runs tree is created
 #if new run setup with file path
+  command = ARGV[0]
 
-  if ARGV[0] = "new"
+  case command
+  when command = "new"
     Setup.new(ARGV[1]).new_project_skeleton
-  else ARGV[0] = "build"
-    Build.new(ARGV[1])
-    end
+  when command = "build"
+    Build.new(ARGV[1]).build
+  else command = "post"
+    title = ARGV[2..-1].join(" ")
+    Post.new(ARGV[1], title).new_post
+    puts "Created a new post file at #{ARGV[1]}"
+  end
+
 
 
 # bind/hyde new /path/to/the/site  <-- entered into command line
