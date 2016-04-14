@@ -2,9 +2,10 @@ require 'FileUtils'
 require 'kramdown'
 require 'Find'
 require './lib/setup.rb'
+require './lib/module.rb'
 
 class Build
-
+  include BaseFile
   attr_reader :setup
 
   def initialize(file_path)
@@ -13,27 +14,27 @@ class Build
   end
 
   def build
-    if Dir.exist?(File.join(Dir.pwd, @file_path))
+    if Dir.exist?(base_file)
       copy_source
       flag_markdowns
       convert_md_to_html
-      inject_layout
+      inject_layout_to_all
     else
       setup.new_project_skeleton
       copy_source
       flag_markdowns
       convert_md_to_html
-      inject_layout
+      inject_layout_to_all
     end
   end
 
   def copy_source
-    FileUtils.cp_r(File.join(Dir.pwd, "#{@file_path}/source/."), File.join(Dir.pwd, "#{@file_path}/output"))
+    FileUtils.cp_r(File.join(base_file, "/source/."), File.join(base_file, "/output"))
   end
 
   def flag_markdowns
     markdown_files = []
-    Find.find(File.join(Dir.pwd, "#{@file_path}/output")) do |path|
+    Find.find(File.join(base_file, "/output")) do |path|
       markdown_files << path if path =~ /.*\.md$/
     end
     markdown_files
@@ -51,26 +52,22 @@ class Build
 
   def flag_html
     html_files = []
-    Find.find(File.join(Dir.pwd, "#{@file_path}/output")) do |path|
+    Find.find(File.join(base_file, "/output")) do |path|
       html_files << path if path =~ /.*\.html$/
     end
     html_files
   end
 
-  def inject_layout
-    content = File.read(File.join(Dir.pwd,"/test/newproject/output/posts/2016-04-13-pleasework.html"))
-    erb = ERB.new(File.read(File.join(Dir.pwd,"/test/newproject/source/layouts/default.html.erb"))).result(binding)
-    File.write(File.join(Dir.pwd,"/test/newproject/output/posts/2016-04-13-pleasework.html"), erb)
+  def inject_layout(path)
+    content = File.read(path)
+    erb = ERB.new(File.read(File.join(base_file, "/source/layouts/default.html.erb"))).result(binding)
+    File.write(path, erb)
   end
 
-  # def inject_layout_into_output_posts
-  #   default_format = "./lib/default_template.html.erb"
-  #   read_default = File.read(default_format)
-  #   flag_html(title, content).each do |path|
-  #     new_text = ERB.new(read_default).result(binding)
-  #     File.write(path, new_text)
-  #   end
-  # end
-
+  def inject_layout_to_all
+    flag_html.each do |path|
+      inject_layout(path)
+    end
+  end
 
 end

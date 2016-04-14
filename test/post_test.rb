@@ -9,7 +9,6 @@ require './lib/post.rb'
 class PostTest < Minitest::Test
 
   def test_format_title_returns_title_with_no_spaces
-    skip
     b = Build.new("/test/newproject")
     post = Post.new("/test/newproject", "Lets Go")
     build_project_scaffold(b)
@@ -28,7 +27,7 @@ class PostTest < Minitest::Test
     post.basic_content
     b.build
 
-
+    FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
   end
 
 

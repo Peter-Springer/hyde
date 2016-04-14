@@ -1,6 +1,8 @@
 require './lib/build.rb'
+require './lib/module.rb'
 
 class Post
+  include BaseFile
 
   def initialize(file_path, title)
     @file_path = file_path
@@ -8,7 +10,7 @@ class Post
   end
 
   def new_post
-    if Dir.exist?(File.join(Dir.pwd, @file_path))
+    if Dir.exist?(base_file)
       format_title
       create_new_file
       basic_content
@@ -26,14 +28,14 @@ class Post
 
   def create_new_file
     date = Time.new.strftime("%Y-%m-%d")
-    FileUtils.touch (File.join(Dir.pwd, "#{@file_path}/source/posts/#{date}-#{format_title}.md"))
+    FileUtils.touch (File.join(base_file, "/source/posts/#{date}-#{format_title}.md"))
   end
 
   def basic_content
     content = "Your content here"
     date = Time.new.strftime("%Y-%m-%d")
     message = "# #{@title}\n\n#{content}"
-    File.write(File.join(Dir.pwd, "#{@file_path}/source/posts/#{date}-#{format_title}.md"), message)
+    File.write(File.join(base_file, "/source/posts/#{date}-#{format_title}.md"), message)
   end
 
 end
