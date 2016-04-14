@@ -30,8 +30,9 @@ class Post
   end
 
   def basic_content
+    content = "Your content here"
     date = Time.new.strftime("%Y-%m-%d")
-    message = "# #{@title} \n\n Your content here"
+    message = "---\ntags: \n---\n# #{@title}\n\n#{content}"
     File.write(File.join(Dir.pwd, "#{@file_path}/source/posts/#{date}-#{format_title}.md"), message)
   end
 

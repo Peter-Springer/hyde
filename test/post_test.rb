@@ -26,6 +26,7 @@ class PostTest < Minitest::Test
     build_project_scaffold(b)
     post.create_new_file
     post.basic_content
+    b.build
 
 
   end

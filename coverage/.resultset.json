@@ -83,6 +83,7 @@
         null,
         1,
         1,
+<<<<<<< HEAD
         4,
         null,
         null,
@@ -93,16 +94,33 @@
         1,
         1,
         1,
-        1,
+=======
         null,
         null,
         1,
+>>>>>>> 1b3bc003bfbf9fd02a7f3ce5ee44f02ba030594a
+        1,
+        0,
+        null,
+<<<<<<< HEAD
+=======
+        1,
+>>>>>>> 1b3bc003bfbf9fd02a7f3ce5ee44f02ba030594a
+        null,
+        1,
         1,
         1,
         1,
         1,
         1,
         null,
+<<<<<<< HEAD
+=======
+        1,
+        1,
+        1,
+        1,
+>>>>>>> 1b3bc003bfbf9fd02a7f3ce5ee44f02ba030594a
         null,
         null
       ],
@@ -110,6 +128,11 @@
         1,
         null,
         1,
+<<<<<<< HEAD
+=======
+        1,
+        2,
+>>>>>>> 1b3bc003bfbf9fd02a7f3ce5ee44f02ba030594a
         null,
         1,
         1,
@@ -117,6 +140,7 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -127,6 +151,10 @@
         0,
         0,
         null,
+=======
+        1,
+        5,
+>>>>>>> 1b3bc003bfbf9fd02a7f3ce5ee44f02ba030594a
         null,
         null,
         1,
@@ -136,17 +164,33 @@
         1,
         1,
         1,
+<<<<<<< HEAD
+=======
+        1,
+        1,
+        1,
+        1,
+>>>>>>> 1b3bc003bfbf9fd02a7f3ce5ee44f02ba030594a
         null,
         null,
         1,
         1,
         1,
         1,
+<<<<<<< HEAD
+=======
+        1,
+        1,
+>>>>>>> 1b3bc003bfbf9fd02a7f3ce5ee44f02ba030594a
         null,
         null,
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1460591754
+=======
+    "timestamp": 1460596234
+>>>>>>> 1b3bc003bfbf9fd02a7f3ce5ee44f02ba030594a
   }
 }
