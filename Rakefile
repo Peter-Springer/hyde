@@ -1,3 +1,4 @@
+
 namespace :sanitation do
   desc "Check line lengths & whitespace with Cane"
   task :lines do
@@ -18,5 +19,5 @@ namespace :sanitation do
   end
 
   desc "Check both line length and method length"
-  task :all => [:lines, :methods]
+  task :all [:lines, :methods]
 end
