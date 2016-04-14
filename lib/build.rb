@@ -6,22 +6,25 @@ require './lib/module.rb'
 
 class Build
   include BaseFile
-  attr_reader :setup
+  attr_reader :setup, :tag_hash
 
   def initialize(file_path)
     @setup = Setup.new(file_path)
     @file_path = file_path
+    @tag_hash = {}
   end
 
   def build
     if Dir.exist?(base_file)
       copy_source
+      extract_tags
       flag_markdowns
       convert_md_to_html
       inject_layout_to_all
     else
       setup.new_project_skeleton
       copy_source
+      extract_tags
       flag_markdowns
       convert_md_to_html
       inject_layout_to_all
@@ -67,6 +70,19 @@ class Build
   def inject_layout_to_all
     flag_html.each do |path|
       inject_layout(path)
+    end
+  end
+
+  def extract_tags
+    post_lines = File.readlines(File.join(base_file,"/source/posts/2016-04-14-welcome-to-hyde.md"))
+    #require 'pry'; binding.pry
+    if post_lines.length != 0
+      tags = post_lines[1].chomp.split
+      formatted = tags.map do |tag|
+        tag.gsub(",","")
+      end
+      tag_values = [formatted[0], formatted[1..-1]]
+      @tag_hash = Hash[*tag_values]
     end
   end
 

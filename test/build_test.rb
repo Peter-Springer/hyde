@@ -67,6 +67,18 @@ class BuildTest < Minitest::Test
     FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
   end
 
+  def test_extract_tags_returns_empty_hash_on_empty_post
+    b = Build.new("/test/newproject")
+    build_project_scaffold(b)
+    b.build
+    #b.extract_tags
+
+    assert_equal Hash, b.tag_hash.class
+
+    FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
+  end
+
+
   def build_project_scaffold(b)
     b.setup.new_project_skeleton
     b.copy_source
