@@ -26,8 +26,8 @@ class Setup
   end
 
   def create_sub_folders
-    ["css", "pages", "posts", "layouts"].each do |element|
-      FileUtils.mkdir_p(File.join(Dir.pwd, "#{@file_path}/source/#{element}"))
+    ["source/css", "source/pages", "source/posts", "source/layouts", "output/tags"].each do |element|
+      FileUtils.mkdir_p(File.join(Dir.pwd, "#{@file_path}/#{element}"))
     end
   end
 

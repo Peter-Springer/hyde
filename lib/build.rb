@@ -47,4 +47,22 @@ class Build
     end
   end
 
+  def flag_html
+    html_files = []
+    Find.find(File.join(Dir.pwd, "#{@file_path}/output")) do |path|
+      html_files << path if path =~ /.*\.html$/
+    end
+    html_files
+  end
+
+  def inject_layout_into_output_posts
+    default_format = "./lib/default_template.html.erb"
+    read_default = File.read(default_format)
+    flag_html(title, content).each do |path|
+      new_text = ERB.new(read_default).result(binding)
+      File.write(path, new_text)
+    end
+  end
+
+
 end
