@@ -17,11 +17,13 @@ class Build
       copy_source
       flag_markdowns
       convert_md_to_html
+      inject_layout
     else
       setup.new_project_skeleton
       copy_source
       flag_markdowns
       convert_md_to_html
+      inject_layout
     end
   end
 
@@ -55,14 +57,20 @@ class Build
     html_files
   end
 
-  def inject_layout_into_output_posts
-    default_format = "./lib/default_template.html.erb"
-    read_default = File.read(default_format)
-    flag_html(title, content).each do |path|
-      new_text = ERB.new(read_default).result(binding)
-      File.write(path, new_text)
-    end
+  def inject_layout
+    content = File.read(File.join(Dir.pwd,"/test/newproject/output/posts/2016-04-13-pleasework.html"))
+    erb = ERB.new(File.read(File.join(Dir.pwd,"/test/newproject/source/layouts/default.html.erb"))).result(binding)
+    File.write(File.join(Dir.pwd,"/test/newproject/output/posts/2016-04-13-pleasework.html"), erb)
   end
+
+  # def inject_layout_into_output_posts
+  #   default_format = "./lib/default_template.html.erb"
+  #   read_default = File.read(default_format)
+  #   flag_html(title, content).each do |path|
+  #     new_text = ERB.new(read_default).result(binding)
+  #     File.write(path, new_text)
+  #   end
+  # end
 
 
 end

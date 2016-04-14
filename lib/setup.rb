@@ -16,7 +16,7 @@ class Setup
     create_folders
     create_sub_folders
     create_files
-    setup_default_layout("Juicy Post", "Your content here")
+    setup_default_layout
   end
 
   def create_folders
@@ -40,12 +40,18 @@ class Setup
     FileUtils.touch (File.join(Dir.pwd, "#{@file_path}/source/layouts/default.html.erb"))
   end
 
-  def setup_default_layout(title, content)
-    default_format = "./lib/default_template.html.erb"
-    default_file = File.join(Dir.pwd, "#{@file_path}/source/layouts/default.html.erb")
-    read_default = File.read(default_format)
-    new_text = ERB.new(read_default).result(binding)
-    File.write(default_file, new_text)
+  def setup_default_layout
+    format = File.read("./lib/default_template.html.erb")
+    File.write(File.join(Dir.pwd,"#{@file_path}/source/layouts/default.html.erb"), format)
   end
+
+
+  #
+  #   default_format = "./lib/default_template.html.erb"
+  #   default_file = File.join(Dir.pwd, "#{@file_path}/source/layouts/default.html.erb")
+  #   read_default = File.read(default_format)
+  #   new_text = ERB.new(read_default).result(binding)
+  #   File.write(default_file, new_text)
+  # end
 
 end
