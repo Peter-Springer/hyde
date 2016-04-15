@@ -6,7 +6,7 @@ require './lib/module.rb'
 
 class Build
   include BaseFile
-  attr_reader :setup, :tag_hash
+  attr_reader :setup, :tag_hash, :tag_link_hash
 
   def initialize(file_path)
     @setup = Setup.new(file_path)
