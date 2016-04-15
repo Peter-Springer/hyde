@@ -2,13 +2,12 @@
 require './lib/setup.rb'
 require './lib/build.rb'
 require './lib/post.rb'
+require 'filewatcher'
+
 args = ARGV
 
 puts "You ran Hyde with these arguments: #{args}"
 
-#run hyde
-#when hyde runs tree is created
-#if new run setup with file path
   command = ARGV[0]
 
   case command
@@ -16,14 +15,18 @@ puts "You ran Hyde with these arguments: #{args}"
     Setup.new(ARGV[1]).new_project_skeleton
   when command = "build"
     Build.new(ARGV[1]).build
-  else command = "post"
+  when command = "post"
     title = ARGV[2..-1].join(" ")
     Post.new(ARGV[1], title).new_post
     puts "Created a new post file at #{ARGV[1]}"
+  when command = "watchfs"
+    file = ARGV[1]
+    file_path = File.join(Dir.pwd, "#{file}")
+    FileWatcher.new(file_path).watch() do |filename, event|
+      if (event == :changed)
+        `bin/hyde build #{file}`
+        puts "#{file} has changed and been rebuilt"
+        break
+      end
+    end
   end
-
-
-
-# bind/hyde new /path/to/the/site  <-- entered into command line
-# ARGV = ["new", "/path/to/the/site"]  <--- automatically created
-# "new /path/to/the/site".split(" ")  <---- how ARGV gets created

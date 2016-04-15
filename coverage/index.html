@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-14T11:42:27-06:00">2016-04-14T11:42:27-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-14T20:11:16-06:00">2016-04-14T20:11:16-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">86.96%</span></span>
+    (<span class="covered_percent"><span class="yellow">83.75%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.89
+         9.88
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>3</b> files in total.
-    <b>92</b> relevant lines. 
-    <span class="green"><b>80</b> lines covered</span> and
-    <span class="red"><b>12</b> lines missed </span>
+    <b>4</b> files in total.
+    <b>160</b> relevant lines. 
+    <span class="green"><b>134</b> lines covered</span> and
+    <span class="red"><b>26</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#d90086bc45913fe600725b3b957d66024220ef31" class="src_link" title="lib/build.rb">lib/build.rb</a></td>
-        <td class="yellow strong">81.36 %</td>
-        <td>89</td>
-        <td>59</td>
-        <td>48</td>
-        <td>11</td>
-        <td>6.3</td>
+        <td class="green strong">90.1 %</td>
+        <td>154</td>
+        <td>101</td>
+        <td>91</td>
+        <td>10</td>
+        <td>11.2</td>
       </tr>
       
       <tr>
@@ -67,7 +67,17 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>38.3</td>
+        <td>68.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#e9e7ff445a658dada87d4b0c1cfc4e75958aeb0e" class="src_link" title="lib/post.rb">lib/post.rb</a></td>
+        <td class="red strong">42.31 %</td>
+        <td>41</td>
+        <td>26</td>
+        <td>11</td>
+        <td>15</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -77,7 +87,7 @@
         <td>30</td>
         <td>29</td>
         <td>1</td>
-        <td>4.9</td>
+        <td>7.6</td>
       </tr>
       
     </tbody>
@@ -99,11 +109,11 @@
         <div class="source_table" id="d90086bc45913fe600725b3b957d66024220ef31">
   <div class="header">
     <h3>lib/build.rb</h3>
-    <h4><span class="yellow">81.36 %</span> covered</h4>
+    <h4><span class="green">90.1 %</span> covered</h4>
     <div>
-      <b>59</b> relevant lines. 
-      <span class="green"><b>48</b> lines covered</span> and
-      <span class="red"><b>11</b> lines missed.</span>
+      <b>101</b> relevant lines. 
+      <span class="green"><b>91</b> lines covered</span> and
+      <span class="red"><b>10</b> lines missed.</span>
     </div>
   </div>
   
@@ -176,454 +186,454 @@
           <code class="ruby">  def initialize(file_path)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="12">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="12">
+          <span class="hits">8</span>
           
           <code class="ruby">    @setup = Setup.new(file_path)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="13">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="13">
+          <span class="hits">8</span>
           
           <code class="ruby">    @file_path = file_path</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="14">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="14">
+          <span class="hits">8</span>
           
           <code class="ruby">    @tag_hash = {}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="covered" data-hits="8" data-linenumber="15">
+          <span class="hits">8</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @tag_link_hash = {}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">  def build</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="18">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
           
           <code class="ruby">    if Dir.exist?(base_file)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="20">
+          <span class="hits">3</span>
           
           <code class="ruby">      copy_source</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="20">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="21">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      build_tag_directory</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="22">
+          <span class="hits">3</span>
           
           <code class="ruby">      extract_tags</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="21">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="23">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      clean_up_tag_names</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="24">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      build_tag_files</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="25">
+          <span class="hits">3</span>
           
           <code class="ruby">      flag_markdowns</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="22">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="26">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      write_tag_links_for_every_post</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="27">
+          <span class="hits">3</span>
           
           <code class="ruby">      convert_md_to_html</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="23">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="28">
+          <span class="hits">3</span>
           
           <code class="ruby">      inject_layout_to_all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
+        <li class="missed" data-hits="0" data-linenumber="30">
           
           
           <code class="ruby">      setup.new_project_skeleton</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
+        <li class="missed" data-hits="0" data-linenumber="31">
           
           
           <code class="ruby">      copy_source</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="32">
+          
+          
+          <code class="ruby">      build_tag_directory</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="33">
           
           
           <code class="ruby">      extract_tags</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
+          
+          <code class="ruby">      clean_up_tag_names</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
+          
+          <code class="ruby">      build_tag_files</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
           
           
           <code class="ruby">      flag_markdowns</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">      write_tag_links_for_every_post</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
           
           
           <code class="ruby">      convert_md_to_html</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="missed" data-hits="0" data-linenumber="39">
           
           
           <code class="ruby">      inject_layout_to_all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def copy_source</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="35">
-          <span class="hits">7</span>
-          
-          <code class="ruby">    FileUtils.cp_r(File.join(base_file, &quot;/source/.&quot;), File.join(base_file, &quot;/output&quot;))</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def flag_markdowns</code>
-        </li>
-      
-        <li class="covered" data-hits="12" data-linenumber="39">
-          <span class="hits">12</span>
-          
-          <code class="ruby">    markdown_files = []</code>
-        </li>
-      
-        <li class="covered" data-hits="12" data-linenumber="40">
-          <span class="hits">12</span>
-          
-          <code class="ruby">    Find.find(File.join(base_file, &quot;/output&quot;)) do |path|</code>
-        </li>
-      
-        <li class="covered" data-hits="144" data-linenumber="41">
-          <span class="hits">144</span>
-          
-          <code class="ruby">      markdown_files &lt;&lt; path if path =~ /.*\.md$/</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="43">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
           
-          <code class="ruby">    markdown_files</code>
+          <code class="ruby">  def copy_source</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="13" data-linenumber="44">
+          <span class="hits">13</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    FileUtils.cp_r(File.join(base_file, &quot;/source/.&quot;), File.join(base_file, &quot;/output&quot;))</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="46">
+        <li class="covered" data-hits="1" data-linenumber="47">
           <span class="hits">1</span>
           
-          <code class="ruby">  def convert_md_to_html</code>
+          <code class="ruby">  def flag_markdowns</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="47">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="31" data-linenumber="48">
+          <span class="hits">31</span>
           
-          <code class="ruby">    flag_markdowns.each do |path|</code>
+          <code class="ruby">    markdown_files = []</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="48">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="31" data-linenumber="49">
+          <span class="hits">31</span>
           
-          <code class="ruby">      start_new_path = path.gsub(Dir.pwd, &quot;&quot;)</code>
+          <code class="ruby">    Find.find(File.join(base_file, &quot;/output&quot;)) do |path|</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="49">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="409" data-linenumber="50">
+          <span class="hits">409</span>
           
-          <code class="ruby">      markdown = File.read(path)</code>
+          <code class="ruby">      markdown_files &lt;&lt; path if path =~ /.*\.md$/</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="50">
-          <span class="hits">15</span>
+        <li class="never" data-hits="" data-linenumber="51">
           
-          <code class="ruby">      html = Kramdown::Document.new(markdown).to_html</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="51">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="31" data-linenumber="52">
+          <span class="hits">31</span>
           
-          <code class="ruby">      File.write(path.gsub(&quot;.md&quot;, &quot;.html&quot;), html)</code>
-        </li>
-      
-        <li class="covered" data-hits="15" data-linenumber="52">
-          <span class="hits">15</span>
-          
-          <code class="ruby">      File.delete(path)</code>
+          <code class="ruby">    markdown_files</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">  def flag_html</code>
+          <code class="ruby">  def convert_md_to_html</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="57">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="9" data-linenumber="56">
+          <span class="hits">9</span>
           
-          <code class="ruby">    html_files = []</code>
+          <code class="ruby">    flag_markdowns.each do |path|</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="58">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="28" data-linenumber="57">
+          <span class="hits">28</span>
           
-          <code class="ruby">    Find.find(File.join(base_file, &quot;/output&quot;)) do |path|</code>
+          <code class="ruby">      start_new_path = path.gsub(Dir.pwd, &quot;&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="59">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="28" data-linenumber="58">
+          <span class="hits">28</span>
           
-          <code class="ruby">      html_files &lt;&lt; path if path =~ /.*\.html$/</code>
+          <code class="ruby">      markdown = File.read(path)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="covered" data-hits="28" data-linenumber="59">
+          <span class="hits">28</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      html = Kramdown::Document.new(markdown).to_html</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="61">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="28" data-linenumber="60">
+          <span class="hits">28</span>
           
-          <code class="ruby">    html_files</code>
+          <code class="ruby">      File.write(path.gsub(&quot;.md&quot;, &quot;.html&quot;), html)</code>
+        </li>
+      
+        <li class="covered" data-hits="28" data-linenumber="61">
+          <span class="hits">28</span>
+          
+          <code class="ruby">      File.delete(path)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
-          <code class="ruby">  def inject_layout(path)</code>
+          <code class="ruby">  def flag_html</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="65">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="3" data-linenumber="66">
+          <span class="hits">3</span>
           
-          <code class="ruby">    content = File.read(path)</code>
+          <code class="ruby">    html_files = []</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="66">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="3" data-linenumber="67">
+          <span class="hits">3</span>
           
-          <code class="ruby">    erb = ERB.new(File.read(File.join(base_file, &quot;/source/layouts/default.html.erb&quot;))).result(binding)</code>
+          <code class="ruby">    Find.find(File.join(base_file, &quot;/output&quot;)) do |path|</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="67">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="38" data-linenumber="68">
+          <span class="hits">38</span>
           
-          <code class="ruby">    File.write(path, erb)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="68">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      html_files &lt;&lt; path if path =~ /.*\.html$/</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="70">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def inject_layout_to_all</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="71">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    flag_html.each do |path|</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="72">
-          <span class="hits">6</span>
-          
-          <code class="ruby">      inject_layout(path)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="73">
-          
-          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="covered" data-hits="3" data-linenumber="70">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    html_files</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="72">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="76">
+        <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
-          <code class="ruby">  def extract_tags</code>
+          <code class="ruby">  def inject_layout(path)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="77">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="14" data-linenumber="74">
+          <span class="hits">14</span>
           
-          <code class="ruby">    post_lines = File.readlines(File.join(base_file,&quot;/source/posts/2016-04-14-welcome-to-hyde.md&quot;))</code>
+          <code class="ruby">    content = File.read(path)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="75">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    erb = ERB.new(File.read(File.join(base_file, &quot;/source/layouts/default.html.erb&quot;))).result(binding)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="76">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    File.write(path, erb)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
           
           
-          <code class="ruby">    #require &#39;pry&#39;; binding.pry</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="79">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="79">
+          <span class="hits">1</span>
           
-          <code class="ruby">    if post_lines.length != 0</code>
+          <code class="ruby">  def inject_layout_to_all</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="80">
+        <li class="covered" data-hits="3" data-linenumber="80">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">      tags = post_lines[1].chomp.split</code>
+          <code class="ruby">    flag_html.each do |path|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="81">
+        <li class="covered" data-hits="14" data-linenumber="81">
+          <span class="hits">14</span>
           
-          
-          <code class="ruby">      formatted = tags.map do |tag|</code>
+          <code class="ruby">      inject_layout(path)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="82">
           
           
-          <code class="ruby">        tag.gsub(&quot;,&quot;,&quot;&quot;)</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="83">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="84">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
-          <code class="ruby">      tag_values = [formatted[0], formatted[1..-1]]</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="85">
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      @tag_hash = Hash[*tag_values]</code>
+          <code class="ruby">  def read_file(path)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="covered" data-hits="60" data-linenumber="86">
+          <span class="hits">60</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">    File.readlines(path)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="87">
@@ -638,7 +648,397 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def extract_tags</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="90">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    formatted = []</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="91">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    flag_markdowns.each do |path|</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="92">
+          <span class="hits">18</span>
+          
+          <code class="ruby">    read_file(path)</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="93">
+          <span class="hits">18</span>
+          
+          <code class="ruby">    if read_file(path).length != 0</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="94">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        tags = read_file(path)[1][6..-1].chomp.split(&quot;, &quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="95">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        tags.each do |tag|</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="96">
+          <span class="hits">12</span>
+          
+          <code class="ruby">          formatted &lt;&lt; tag.gsub(&quot;,&quot;,&quot;&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="100">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    @tag_hash[&quot;keys:&quot;] = formatted</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="103">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def clean_up_tag_names</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="104">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    tag_names = @tag_hash.values</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="105">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    formatted = tag_names.map do |keys|</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="106">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      keys.map do |tag|</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="107">
+          <span class="hits">12</span>
+          
+          <code class="ruby">        tag.downcase.gsub(&quot; &quot;, &quot;_&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="110">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    formatted</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def build_tag_directory</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="114">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    FileUtils.mkdir_p(File.join(base_file, &quot;/output/tags&quot;))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def build_tag_files</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="118">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    unique_tags = clean_up_tag_names[0].uniq</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="119">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    unique_tags.each do |tag|</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="120">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      new_file = File.join(base_file,&quot;/output/tags/#{tag}.html&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="121">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      FileUtils.touch (new_file)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="122">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      @tag_link_hash[tag] = new_file</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="124">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="126">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def extract_tags_single_file(path)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="127">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    formatted = []</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="128">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    read_file(path)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="129">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    if read_file(path).length != 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        tags = read_file(path)[1][6..-1].chomp.split(&quot;, &quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="131">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        tags.each do |tag|</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="132">
+          <span class="hits">4</span>
+          
+          <code class="ruby">          formatted &lt;&lt; tag.gsub(&quot;,&quot;,&quot;&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="135">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    formatted</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="137">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="138">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def write_tag_links_in_post(path)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="139">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    extract_tags_single_file(path).each do |tag|</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="140">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      if @tag_hash.values[0].include?(tag)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="141">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        File.open(path, &#39;a&#39;) do |file|</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="142">
+          <span class="hits">4</span>
+          
+          <code class="ruby">          file.write &quot;#{@tag_link_hash[tag.downcase.gsub(&quot; &quot;, &quot;_&quot;)]}\n&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="146">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="147">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="148">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def write_tag_links_for_every_post</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="149">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    flag_markdowns.each do |path|</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="150">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      write_tag_links_in_post(path)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
           
           
           <code class="ruby">end</code>
@@ -680,8 +1080,8 @@
           <code class="ruby">  def base_file</code>
         </li>
       
-        <li class="covered" data-hits="113" data-linenumber="4">
-          <span class="hits">113</span>
+        <li class="covered" data-hits="204" data-linenumber="4">
+          <span class="hits">204</span>
           
           <code class="ruby">    File.join(Dir.pwd, &quot;#{@file_path}&quot;)</code>
         </li>
@@ -699,6 +1099,270 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="e9e7ff445a658dada87d4b0c1cfc4e75958aeb0e">
+  <div class="header">
+    <h3>lib/post.rb</h3>
+    <h4><span class="red">42.31 %</span> covered</h4>
+    <div>
+      <b>26</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>15</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/build.rb&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;./lib/module.rb&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Post</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include BaseFile</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(file_path, title)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @file_path = file_path</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @title = title</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def new_post</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">    if Dir.exist?(base_file)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">      format_title</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">      create_new_file</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">      basic_content</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
+          <code class="ruby">      Build.new(@file_path).setup.new_project_skeleton</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">      format_title</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">      create_new_file</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
+          
+          <code class="ruby">      basic_content</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def format_title</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
+          
+          <code class="ruby">    @title.gsub(&quot; &quot;, &quot;-&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create_new_file</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
+          
+          <code class="ruby">    date = Time.new.strftime(&quot;%Y-%m-%d&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">    FileUtils.touch (File.join(base_file, &quot;/source/posts/#{date}-#{format_title}.md&quot;))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def basic_content</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
+          
+          <code class="ruby">    content = &quot;Your content here&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="36">
+          
+          
+          <code class="ruby">    date = Time.new.strftime(&quot;%Y-%m-%d&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">    message = &quot;---\ntags:\n---\n# #{@title}\n\n#{content}\n\n# Tag Links\n&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
+          
+          <code class="ruby">    File.write(File.join(base_file, &quot;/source/posts/#{date}-#{format_title}.md&quot;), message)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">end</code>
@@ -764,8 +1428,8 @@
           <code class="ruby">  def initialize(file_path)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="8">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
           
           <code class="ruby">    @file_path = file_path</code>
         </li>
@@ -788,8 +1452,8 @@
           <code class="ruby">  def new_project_skeleton</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="12">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="12">
+          <span class="hits">8</span>
           
           <code class="ruby">    if Dir.exists?(base_file)</code>
         </li>
@@ -806,8 +1470,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="15">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="15">
+          <span class="hits">8</span>
           
           <code class="ruby">      FileUtils.mkdir_p(base_file)</code>
         </li>
@@ -824,26 +1488,26 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="18">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="18">
+          <span class="hits">8</span>
           
           <code class="ruby">    create_folders</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="19">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="19">
+          <span class="hits">8</span>
           
           <code class="ruby">    create_sub_folders</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="20">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="20">
+          <span class="hits">8</span>
           
           <code class="ruby">    create_files</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="21">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="21">
+          <span class="hits">8</span>
           
           <code class="ruby">    setup_default_layout</code>
         </li>
@@ -866,14 +1530,14 @@
           <code class="ruby">  def create_folders</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="25">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="25">
+          <span class="hits">8</span>
           
           <code class="ruby">    [&quot;output&quot;, &quot;source&quot;].each do |element|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="26">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="26">
+          <span class="hits">16</span>
           
           <code class="ruby">      FileUtils.mkdir_p(File.join(base_file, &quot;/#{element}&quot;))</code>
         </li>
@@ -902,8 +1566,8 @@
           <code class="ruby">  def create_sub_folders</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="31">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="31">
+          <span class="hits">8</span>
           
           <code class="ruby">    sub_folders = [&quot;source/css&quot;,</code>
         </li>
@@ -932,14 +1596,14 @@
           <code class="ruby">                   &quot;output/tags&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="36">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="36">
+          <span class="hits">8</span>
           
           <code class="ruby">    sub_folders.each do |element|</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="37">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="40" data-linenumber="37">
+          <span class="hits">40</span>
           
           <code class="ruby">      FileUtils.mkdir_p(File.join(base_file, &quot;/#{element}&quot;))</code>
         </li>
@@ -968,14 +1632,14 @@
           <code class="ruby">  def create_files</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="42">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="42">
+          <span class="hits">8</span>
           
           <code class="ruby">    date = Time.new.strftime(&quot;%Y-%m-%d&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="43">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="43">
+          <span class="hits">8</span>
           
           <code class="ruby">    files = [&quot;css/main.css&quot;,</code>
         </li>
@@ -1004,14 +1668,14 @@
           <code class="ruby">             &quot;layouts/default.html.erb&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="48">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="48">
+          <span class="hits">8</span>
           
           <code class="ruby">    files.each do |file|</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="49">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="40" data-linenumber="49">
+          <span class="hits">40</span>
           
           <code class="ruby">      FileUtils.touch (File.join(base_file,&quot;/source/#{file}&quot;))</code>
         </li>
@@ -1040,14 +1704,14 @@
           <code class="ruby">  def setup_default_layout</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="54">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="54">
+          <span class="hits">8</span>
           
           <code class="ruby">    format = File.read(&quot;./lib/default_template.html.erb&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="55">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="55">
+          <span class="hits">8</span>
           
           <code class="ruby">    File.write(File.join(base_file, &quot;/source/layouts/default.html.erb&quot;), format)</code>
         </li>

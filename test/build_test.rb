@@ -4,6 +4,8 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/build.rb'
 require './lib/setup.rb'
+require './lib/post.rb'
+require 'FileUtils'
 
 class BuildTest < Minitest::Test
 
@@ -67,13 +69,54 @@ class BuildTest < Minitest::Test
     FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
   end
 
-  def test_extract_tags_returns_empty_hash_on_empty_post
+  def test_extract_tags_returns_empty_array_on_empty_post
     b = Build.new("/test/newproject")
     build_project_scaffold(b)
     b.build
-    #b.extract_tags
+    b.extract_tags
 
-    assert_equal Hash, b.tag_hash.class
+    assert_equal ["keys:"], b.tag_hash.keys
+    assert_equal [[]], b.tag_hash.values
+
+    FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
+  end
+
+  def test_extract_tags_returns_tags_in_single_array
+    b = Build.new("/test/newproject")
+    build_project_scaffold(b)
+    create_practice_test_post
+    b.copy_source
+    b.flag_markdowns
+    b.extract_tags
+
+    assert_equal 1, b.tag_hash.values.length
+    assert_equal 4, b.tag_hash.values[0].length
+
+    FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
+  end
+
+  def test_clean_up_tags_makes_snake_and_down_case
+    b = Build.new("/test/newproject")
+    build_project_scaffold(b)
+    create_practice_test_post
+    b.copy_source
+    b.flag_markdowns
+    b.extract_tags
+    result = b.clean_up_tag_names
+
+    assert_equal 4, result[0].length
+    assert_equal "national_league", result[0][2]
+
+    FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
+  end
+
+  def test_tag_directory_gets_built
+    b = Build.new("/test/newproject")
+    build_project_scaffold(b)
+    create_practice_test_post
+    b.build
+
+    assert Dir.exist?(File.join(Dir.pwd, "/test/newproject/output/tags"))
 
     FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
   end
@@ -87,4 +130,8 @@ class BuildTest < Minitest::Test
     b.convert_md_to_html
   end
 
+  def create_practice_test_post
+    post = Post.new("/test/newproject", "practice_posts_for_tests")
+    FileUtils.copy_file(File.join(Dir.pwd, "/lib/practice_post_for_tests.md"), File.join(Dir.pwd, "/test/newproject/source/posts/practice_post_for_tests.md"))
+  end
 end
