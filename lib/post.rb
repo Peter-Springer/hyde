@@ -37,5 +37,4 @@ class Post
     message = "---\ntags:\n---\n# #{@title}\n\n#{content}\n\n# Tag Links\n"
     File.write(File.join(base_file, "/source/posts/#{date}-#{format_title}.md"), message)
   end
-
 end

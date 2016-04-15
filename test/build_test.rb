@@ -131,25 +131,30 @@ class BuildTest < Minitest::Test
     b.clean_up_tag_names
     b.build_tag_directory
     b.build_tag_files
-    b.extract_tags_single_file
-    b.write_tag_links_in_post
-    b.write_tag_links_for_every_post
 
-
-    assert_equal 4, b.tag_link_hash.values.length
-    assert Dir.exist?(File.join(Dir.pwd, "/test/newproject/output/tags/national_league.html"))
+    assert File.exist?(File.join(Dir.pwd, "/test/newproject/output/tags/baseball.html"))
+    assert File.exist?(File.join(Dir.pwd, "/test/newproject/output/tags/rockies.html"))
+    assert File.exist?(File.join(Dir.pwd, "/test/newproject/output/tags/national_league.html"))
+    assert File.exist?(File.join(Dir.pwd, "/test/newproject/output/tags/world_series.html"))
 
     FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
   end
 
   def test_extract_tags_from_a_post
-    skip
     b = Build.new("/test/newproject")
     build_project_scaffold(b)
     create_practice_test_post
     b.copy_source
     b.flag_markdowns
     b.extract_tags
+    b.clean_up_tag_names
+    b.build_tag_directory
+    b.build_tag_files
+
+    assert Hash, b.tag_link_hash.class
+    assert ["baseball", "rockies", "national_league", "world_series"], b.tag_link_hash.keys
+    assert_equal 4, b.tag_link_hash.values.length
+    assert ["/Users/charleskaminer/Turing/1module/hyde/test/newproject/output/tags/baseball.html"], b.tag_link_hash["baseball"]
 
     FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
   end

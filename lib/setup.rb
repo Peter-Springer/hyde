@@ -29,30 +29,29 @@ class Setup
 
   def create_sub_folders
     sub_folders = ["source/css",
-                   "source/pages",
-                   "source/posts",
-                   "source/layouts",
-                   "output/tags"]
-    sub_folders.each do |element|
-      FileUtils.mkdir_p(File.join(base_file, "/#{element}"))
+      "source/pages",
+      "source/posts",
+      "source/layouts",
+      "output/tags"]
+      sub_folders.each do |element|
+        FileUtils.mkdir_p(File.join(base_file, "/#{element}"))
+      end
     end
-  end
 
-  def create_files
-    date = Time.new.strftime("%Y-%m-%d")
-    files = ["css/main.css",
-             "index.md",
-             "pages/about.md",
-             "posts/#{date}-welcome-to-hyde.md",
-             "layouts/default.html.erb"]
-    files.each do |file|
-      FileUtils.touch (File.join(base_file,"/source/#{file}"))
+    def create_files
+      date = Time.new.strftime("%Y-%m-%d")
+      files = ["css/main.css",
+        "index.md",
+        "pages/about.md",
+        "posts/#{date}-welcome-to-hyde.md",
+        "layouts/default.html.erb"]
+        files.each do |file|
+          FileUtils.touch (File.join(base_file,"/source/#{file}"))
+        end
+      end
+
+      def setup_default_layout
+        format = File.read("./lib/default_template.html.erb")
+        File.write(File.join(base_file, "/source/layouts/default.html.erb"), format)
+      end
     end
-  end
-
-  def setup_default_layout
-    format = File.read("./lib/default_template.html.erb")
-    File.write(File.join(base_file, "/source/layouts/default.html.erb"), format)
-  end
-
-end

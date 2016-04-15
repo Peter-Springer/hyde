@@ -89,8 +89,8 @@ class Build
   def extract_tags
     formatted = []
     flag_markdowns.each do |path|
-    read_file(path)
-    if read_file(path).length != 0
+      read_file(path)
+      if read_file(path).length != 0
         tags = read_file(path)[1][6..-1].chomp.split(", ")
         tags.each do |tag|
           formatted << tag.gsub(",","")
@@ -127,11 +127,11 @@ class Build
     formatted = []
     read_file(path)
     if read_file(path).length != 0
-        tags = read_file(path)[1][6..-1].chomp.split(", ")
-        tags.each do |tag|
-          formatted << tag.gsub(",","")
-        end
+      tags = read_file(path)[1][6..-1].chomp.split(", ")
+      tags.each do |tag|
+        formatted << tag.gsub(",","")
       end
+    end
     formatted
   end
 
@@ -150,5 +150,4 @@ class Build
       write_tag_links_in_post(path)
     end
   end
-
 end

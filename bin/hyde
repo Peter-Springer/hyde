@@ -8,25 +8,25 @@ args = ARGV
 
 puts "You ran Hyde with these arguments: #{args}"
 
-  command = ARGV[0]
+command = ARGV[0]
 
-  case command
-  when command = "new"
-    Setup.new(ARGV[1]).new_project_skeleton
-  when command = "build"
-    Build.new(ARGV[1]).build
-  when command = "post"
-    title = ARGV[2..-1].join(" ")
-    Post.new(ARGV[1], title).new_post
-    puts "Created a new post file at #{ARGV[1]}"
-  when command = "watchfs"
-    file = ARGV[1]
-    file_path = File.join(Dir.pwd, "#{file}")
-    FileWatcher.new(file_path).watch() do |filename, event|
-      if (event == :changed)
-        `bin/hyde build #{file}`
-        puts "#{file} has changed and been rebuilt"
-        break
-      end
+case command
+when command = "new"
+  Setup.new(ARGV[1]).new_project_skeleton
+when command = "build"
+  Build.new(ARGV[1]).build
+when command = "post"
+  title = ARGV[2..-1].join(" ")
+  Post.new(ARGV[1], title).new_post
+  puts "Created a new post file at #{ARGV[1]}"
+when command = "watchfs"
+  file = ARGV[1]
+  file_path = File.join(Dir.pwd, "#{file}")
+  FileWatcher.new(file_path).watch() do |filename, event|
+    if (event == :changed)
+      `bin/hyde build #{file}`
+      puts "#{file} has changed and been rebuilt"
+      break
     end
   end
+end

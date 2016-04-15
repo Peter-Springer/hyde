@@ -77,5 +77,4 @@ class SetupTest < Minitest::Test
 
     FileUtils.remove_dir(File.join(Dir.pwd, "/test/newproject"))
   end
-
- end
+end
