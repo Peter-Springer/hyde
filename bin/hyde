@@ -12,7 +12,7 @@ command = ARGV[0]
 
 case command
 when command = "new"
-  Setup.new(ARGV[1]).new_project_skeleton
+  Setup.new(ARGV[1..-1].join(" ")).new_project_skeleton
 when command = "build"
   Build.new(ARGV[1]).build
 when command = "post"
